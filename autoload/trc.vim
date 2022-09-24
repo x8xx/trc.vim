@@ -14,6 +14,9 @@ function! trc#Trc() abort
             call denops#request('trc', 'lscroll', '[]')
         elseif c == 'l'
             call denops#request('trc', 'rscroll', '[]')
+        else
+            redraw
+            echo "Start TRC mode:"
         endif
     endwhile
 endfunction
